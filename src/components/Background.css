@@ -1,0 +1,17 @@
+.environmental-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -10;
+    /* Far behind everything */
+    pointer-events: none;
+    transition: background-color 0.5s ease;
+}
+
+/* Hide on mobile/tablet to ensure static background fallback works */
+/* Mobile adjustments if needed, but keeping canvas visible now */
+@media (max-width: 768px) {
+    /* Optional: Adjust position or other properties if needed for mobile */
+}

@@ -1,0 +1,151 @@
+.education {
+    padding-bottom: 80px;
+}
+
+.education-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.education-content {
+    flex: 1;
+    max-width: 600px;
+    animation: fadeRight 0.8s ease-out forwards;
+    opacity: 0;
+    transform: translateX(-20px);
+}
+
+.education-visual {
+    flex: 1;
+    max-width: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeLeft 1s ease-out forwards;
+    /* Slightly delayed or slower */
+    opacity: 0;
+    transform: translateX(20px);
+}
+
+@keyframes fadeRight {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeLeft {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.education-title {
+    text-align: left;
+    left: 0;
+    transform: none;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.education-title::after {
+    left: 0;
+    transform: none;
+    width: 50px;
+}
+
+.title-icon {
+    color: var(--accent-color);
+    font-size: 2rem;
+}
+
+.education-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 30px;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.education-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-color);
+}
+
+.education-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background-color: var(--accent-color);
+}
+
+.institution {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-bottom: 15px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.degree-info {
+    margin-bottom: 20px;
+}
+
+.degree {
+    font-size: 1.2rem;
+    color: var(--accent-color);
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.branch {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.duration {
+    display: inline-block;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 6px 14px;
+    border-radius: 20px;
+    letter-spacing: 0.5px;
+}
+
+@media (max-width: 850px) {
+    .education-container {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .education-title {
+        justify-content: center;
+    }
+
+    .education-title::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .education-card {
+        text-align: left;
+        /* Keep card text aligned left for readability */
+    }
+
+    .education-visual {
+        max-width: 300px;
+        margin-bottom: 20px;
+    }
+}
